@@ -56,6 +56,7 @@ def index():
         projects(),
         contact()
     )
+    
 
 
 app = rx.App()
