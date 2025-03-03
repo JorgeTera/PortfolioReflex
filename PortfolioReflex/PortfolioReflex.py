@@ -1,9 +1,13 @@
 import reflex as rx
 from rxconfig import config
 from .proyectos import proyectos  # Importamos la nueva página de proyectos
+from .footer import *
 
 class State(rx.State):
     pass
+
+def navigatetoproyectos():
+    rx.link("proyectos")
 
 def navbar():
     return rx.hstack(
@@ -15,12 +19,21 @@ def navbar():
         padding="1rem",
         border_bottom="1px solid #ccc"
     )
+    
 
 def home():
     return rx.vstack(
         rx.heading("¡Hola! Soy [Tu Nombre]"),
         rx.text("Desarrollador apasionado por la tecnología y la IA."),
-        rx.button("Ver mis proyectos", href="/proyectos"),  # Cambiamos a la nueva ruta
+        rx.button(
+            "Proyectos!",
+            border_radius="1em",
+            box_shadow="rgba(151, 65, 252, 0.8) 0 15px 30px -10px",
+            background_image="linear-gradient(144deg,#AF40FF,#5B42F3 50%,#00DDEB)",
+            box_sizing="border-box",
+            color="white",
+            opacity=1, 
+            href="/proyectos"),  # Cambiamos a la nueva ruta
         align="center", padding="4rem"
     )
 
@@ -36,16 +49,18 @@ def contact():
         rx.heading("Contacto", id="contact"),
         rx.text("Puedes contactarme a través de LinkedIn o email."),
         padding="4rem"
+        
     )
 
 
 def index():
-    return rx.vstack(
+    return rx.center(rx.vstack(
         navbar(),
         home(),
         about(),
-        contact()
-    )
+        contact(),
+        footer_three_columns(),
+    ))
 
 app = rx.App()
 app.add_page(index, route="/")  # Página principal
