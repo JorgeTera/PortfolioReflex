@@ -58,17 +58,10 @@ def index():
         navbar(),
         home(),
         about(),
-<<<<<<< HEAD
-        projects(),
-        contact()
-    )
-    
-
-=======
         contact(),
         footer_three_columns(),
-    )
->>>>>>> develop
+
+    ))
 
 app = rx.App()
 app.add_page(index, route="/")  # Página principal
