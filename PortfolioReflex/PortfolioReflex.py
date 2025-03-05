@@ -65,7 +65,7 @@ def index():
     return rx.center(rx.vstack(
         navbar(),
         home(),
-        #about(),
+        about(),
         contact(),
         footer_three_columns(), # Asegura que use todo el ancho de la pantalla
         height="100vh",
