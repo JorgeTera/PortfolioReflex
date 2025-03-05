@@ -1,10 +1,5 @@
 import reflex as rx
 
-
-class ProyectosState(rx.State):
-    pass
-
-
 def proyectos():
     proyectos_data = [
         {
