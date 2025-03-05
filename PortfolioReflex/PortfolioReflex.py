@@ -1,9 +1,9 @@
 import reflex as rx
-from rxconfig import config
 from .proyectos import proyectos  # Importamos la nueva página de proyectos
 from .footer import *
 
 class State(rx.State):
+    proyectoslink = rx.link("Proyectos", href="/proyectos")
     pass
 
 def navigatetoproyectos():
@@ -17,7 +17,9 @@ def navbar():
         rx.link("Proyectos", href="/proyectos"),  # Cambiamos href para dirigir a la página
         rx.link("Contacto", href="#contact"),
         padding="1rem",
-        border_bottom="1px solid #ccc"
+        border_bottom="1px solid #ccc",
+        width="100vw",  # Asegura que use todo el ancho de la pantalla
+        
     )
     
 
@@ -34,21 +36,27 @@ def home():
             color="white",
             opacity=1, 
             href="/proyectos"),  # Cambiamos a la nueva ruta
-        align="center", padding="4rem"
+        align="center", padding="4rem",
+        width="100vw",  # Asegura que use todo el ancho de la pantalla
+        
     )
 
 def about():
     return rx.box(
         rx.heading("Sobre mí", id="about"),
         rx.text("Aquí puedes escribir sobre tu experiencia y habilidades."),
-        padding="4rem"
+        padding="4rem",
+        width="100%",  # Asegura que use todo el ancho de la pantalla
+        
     )
 
 def contact():
     return rx.box(
         rx.heading("Contacto", id="contact"),
         rx.text("Puedes contactarme a través de LinkedIn o email."),
-        padding="4rem"
+        padding="4rem",
+        width="100%",  # Asegura que use todo el ancho de la pantalla
+        
         
     )
 
@@ -57,9 +65,10 @@ def index():
     return rx.center(rx.vstack(
         navbar(),
         home(),
-        about(),
+        #about(),
         contact(),
-        footer_three_columns(),
+        footer_three_columns(), # Asegura que use todo el ancho de la pantalla
+        height="100vh",
         
 
     ))
