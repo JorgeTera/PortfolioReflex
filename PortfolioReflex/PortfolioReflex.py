@@ -19,6 +19,7 @@ def navbar():
         width="100vw",  # Asegura que use todo el ancho de la pantalla
         
     )
+
     
 
 def home():
