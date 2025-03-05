@@ -31,6 +31,12 @@ def proyectos():
             "imagen": "/skillset.png",
             "enlace": "https://github.com/tu_usuario/proyecto2"
         },
+        {
+            "titulo": "Proyecto 3",
+            "descripcion": "Otra descripción breve.",
+            "imagen": "/skillset.png",
+            "enlace": "https://github.com/tu_usuario/proyecto2"
+        },
         # Agrega más proyectos aquí
     ]
     

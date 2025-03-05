@@ -60,6 +60,7 @@ def index():
         about(),
         contact(),
         footer_three_columns(),
+        
 
     ))
 
