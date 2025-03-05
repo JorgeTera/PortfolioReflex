@@ -9,7 +9,7 @@ def navbar():
     return rx.hstack(
         rx.text("Portfolio", font_size="2xl", font_weight="bold"),
         rx.spacer(),
-        rx.link("Inicio", href="/PortfolioReflex"),
+        rx.link("Inicio", href="/"),
         #rx.link("Proyectos", href="/proyectos", padding="1rem"),
         rx.link("Contacto", href="/contacto"),
         padding="1rem",

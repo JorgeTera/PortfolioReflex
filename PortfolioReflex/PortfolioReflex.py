@@ -74,5 +74,5 @@ def index():
     ))
 
 app = rx.App()
-app.add_page(index, route="/PortfolioReflex")  # Página principal
-app.add_page(proyectos, route="/proyectos/index.html")  # Nueva página de proyectos
+app.add_page(index, route="/")  # Página principal
+app.add_page(proyectos, route="/proyectos")  # Nueva página de proyectos
