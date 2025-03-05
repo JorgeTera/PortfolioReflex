@@ -14,7 +14,7 @@ def navbar():
         rx.text("Mi Portafolio", font_size="2xl", font_weight="bold"),
         rx.spacer(),
         rx.link("Sobre mí", href="#about"),
-        rx.link("Proyectos", href="proyectos"),  # Cambiamos href para dirigir a la página
+        rx.link("Proyectos", href="/proyectos"),  # Cambiamos href para dirigir a la página
         rx.link("Contacto", href="#contact"),
         padding="1rem",
         border_bottom="1px solid #ccc",
@@ -75,4 +75,4 @@ def index():
 
 app = rx.App()
 app.add_page(index, route="/")  # Página principal
-app.add_page(proyectos, route="proyectos")  # Nueva página de proyectos
+app.add_page(proyectos, route="/proyectos")  # Nueva página de proyectos
