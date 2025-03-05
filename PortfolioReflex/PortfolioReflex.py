@@ -20,17 +20,9 @@ def navbar():
 
 def home():
     return rx.vstack(
-        rx.heading("¡Hola! Soy [Tu Nombre]"),
-        rx.text("Desarrollador apasionado por la tecnología y la IA."),
-        rx.button(
-            "Proyectos!",
-            border_radius="1em",
-            box_shadow="rgba(151, 65, 252, 0.8) 0 15px 30px -10px",
-            background_image="linear-gradient(144deg,#AF40FF,#5B42F3 50%,#00DDEB)",
-            box_sizing="border-box",
-            color="white",
-            opacity=1,
-        ),
+        rx.heading("¡Hola! Soy Jorge"),
+        rx.text("Desarrollador apasionado por la tecnología y la IA que se hace una pregunta..."),
+        background_image="linear-gradient(144deg,#AF40FF,#5B42F3 50%,#00DDEB)",
         align="center",
         padding="4rem",
         width="100%",  # Usamos 100%
@@ -38,7 +30,7 @@ def home():
 
 def about():
     return rx.box(
-        rx.heading("¿Por qué?", id="about"),
+        rx.heading("... ¿Por qué?", id="about"),
         rx.text("Es la mejor forma de demostrar mis capacidades y la posibilidad de mezclar mis 2 pasiones, las webs y los datos!"),
         padding="4rem",
         width="100%",
